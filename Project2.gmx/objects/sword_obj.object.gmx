@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>Flip = 1;
+</string>
           </argument>
         </arguments>
       </action>
@@ -51,12 +52,16 @@
 right_key = keyboard_check(vk_right);
 xpos = Player_obj.x;
 ypos = Player_obj.y;
-Flip = sign(global.hsp);
 
-if(left_key == 1 || right_key == 1) {
-    image_xscale = Flip;
+
+if(global.hsp &lt; 0) {
+    Flip = -1;
+}
+if(global.hsp &gt; 0) {
+    Flip = 1;
 }
 
+image_xscale = Flip;
 x = xpos + (40*Flip);
 y = ypos;
 
