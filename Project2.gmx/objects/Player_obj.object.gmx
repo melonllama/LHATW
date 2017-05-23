@@ -26,10 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>// Variables
-grav = .2;
+grav = .4;
 hsp = 0;
 vsp = 0;
-jsp = 5;
+jsp = 10;
 movespeed = 5;
 </string>
           </argument>
