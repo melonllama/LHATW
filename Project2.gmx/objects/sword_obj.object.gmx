@@ -8,6 +8,28 @@
   <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -25,11 +47,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>xpos = Player_obj.x
-ypos = Player_obj.y
+            <string>left_key = keyboard_check(vk_left);
+right_key = keyboard_check(vk_right);
+xpos = Player_obj.x;
+ypos = Player_obj.y;
+Flip = sign(global.hsp);
 
-x = xpos + 20
-y = ypos
+if(left_key == 1 || right_key == 1) {
+    image_xscale = Flip;
+}
+
+x = xpos + (40*Flip);
+y = ypos;
+
+
+
 </string>
           </argument>
         </arguments>

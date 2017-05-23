@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>// Variables
 grav = .4;
-hsp = 0;
-vsp = 0;
+global.hsp = 0;
+global.vsp = 0;
 jsp = 10;
 movespeed = 5;
 </string>
@@ -62,39 +62,39 @@ down_key = keyboard_check(vk_down);
 //actions to input
 
 if(right_key == 1){
-    hsp = movespeed;
+    global.hsp = movespeed;
 } else if(left_key == 1){
-    hsp = -movespeed;
+    global.hsp = -movespeed;
 } else {
-    hsp = 0;
+    global.hsp = 0;
 };  
 
 
-if(vsp &lt; 10) {
-    vsp += grav;
+if(global.vsp &lt; 10) {
+    global.vsp += grav;
 };
 
 if(place_meeting(x,y+1,Wall_obj)){
-    vsp = up_key * -jsp;
+    global.vsp = up_key * -jsp;
 };
 
 //collision
 
-if (place_meeting(x+hsp,y,Wall_obj)){
-    while(!place_meeting(x+sign(hsp),y,Wall_obj)) {
-        x+=sign(hsp);
+if (place_meeting(x+global.hsp,y,Wall_obj)){
+    while(!place_meeting(x+sign(global.hsp),y,Wall_obj)) {
+        x+=sign(global.hsp);
     };
-    hsp = 0;
+    global.hsp = 0;
 };
-x+=hsp;
+x+=global.hsp;
 
-if (place_meeting(x,y+vsp,Wall_obj)){
-    while(!place_meeting(x,y+sign(vsp),Wall_obj)) {
-        y+=sign(vsp);
+if (place_meeting(x,y+global.vsp,Wall_obj)){
+    while(!place_meeting(x,y+sign(global.vsp),Wall_obj)) {
+        y+=sign(global.vsp);
     };
-    vsp = 0;
+    global.vsp = 0;
 };
-y+=vsp;
+y+=global.vsp;
 
 
 
