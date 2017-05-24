@@ -10,6 +10,8 @@
     <sprite>sprites\Wall_spr</sprite>
     <sprite>sprites\Girder</sprite>
     <sprite>sprites\sword_spr</sprite>
+    <sprite>sprites\spr_tom</sprite>
+    <sprite>sprites\spr_bullet</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -18,6 +20,8 @@
     <object>objects\Player_obj</object>
     <object>objects\Wall_obj</object>
     <object>objects\Girder_obj</object>
+    <object>objects\obj_tom</object>
+    <object>objects\obj_bullet</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Test_rm</room>
