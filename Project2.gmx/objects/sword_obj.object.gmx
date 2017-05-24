@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>
-Flip = 1;
+global.Flip = 1;
 </string>
           </argument>
         </arguments>
@@ -52,14 +52,14 @@ Flip = 1;
             <string>xpos = Player_obj.x;
 ypos = Player_obj.y;
 if(global.hsp &lt; 0) {
-    Flip = -1;
+    global.Flip = -1;
 }
 if(global.hsp &gt; 0) {
-    Flip = 1;
+    global.Flip = 1;
 }
 
-image_xscale = Flip;
-x = xpos + (40*Flip);
+image_xscale = global.Flip;
+x = xpos + (40*global.Flip);
 y = ypos;
 
 

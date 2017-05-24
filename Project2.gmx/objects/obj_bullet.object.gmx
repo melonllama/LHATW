@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>x = global.gunx
 y = global.guny
-bps = 10
+bps = 35
 </string>
           </argument>
         </arguments>
