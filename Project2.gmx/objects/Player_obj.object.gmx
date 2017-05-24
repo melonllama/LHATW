@@ -32,6 +32,7 @@ global.vsp = 0;
 jsp = 10;
 movespeed = 5;
 global.Flip = 1;
+global.weaponSwitch = 0;
 </string>
           </argument>
         </arguments>

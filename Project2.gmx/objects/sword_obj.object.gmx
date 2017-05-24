@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>Screa = 0;
+</string>
           </argument>
         </arguments>
       </action>
@@ -49,19 +50,25 @@
             <kind>1</kind>
             <string>xpos = Player_obj.x;
 ypos = Player_obj.y;
-// Moved these statements to player so they'd work with sword as well without adding
-//Just makes it look nicer, However wanted your approval to delete
 
-//if(global.hsp &lt; 0) {
-//    global.Flip = -1;
-//}
-//if(global.hsp &gt; 0) {
-//    global.Flip = 1;
-//}
+//Weapon Switch
+if (Screa == 0 &amp;&amp; global.weaponSwitch == 0) {
+    instance_create(Player_obj.x,Player_obj.y,sword_obj);
+    Screa=1;
+}
+
+if (global.weaponSwitch != 0) {
+    instance_destroy()
+    Screa=0;
+}
 
 image_xscale = global.Flip;
 x = xpos + (40*global.Flip);
 y = ypos;
+
+draw_text(Player_obj.x-30,Player_obj.y-30,"Screa="&amp;Screa);
+
+
 
 
 
