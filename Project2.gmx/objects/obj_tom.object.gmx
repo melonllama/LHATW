@@ -56,14 +56,23 @@ global.gunx = Player_obj.x - 20;
           <argument>
             <kind>1</kind>
             <string>global.guny = Player_obj.y ;
-global.gunx = Player_obj.x + 20;
-x = global.gunx
-y = global.guny
+global.gunx = Player_obj.x ;
+
 
 if (keyboard_check_pressed(vk_space))
     {
 instance_create(global.gunx, global.guny, obj_bullet);
     }
+    
+
+image_xscale = global.Flip;
+x = global.gunx + (20*global.Flip);
+y = global.guny;
+
+    
+    
+    
+
 </string>
           </argument>
         </arguments>

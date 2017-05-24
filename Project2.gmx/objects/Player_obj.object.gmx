@@ -31,6 +31,7 @@ global.hsp = 0;
 global.vsp = 0;
 jsp = 10;
 movespeed = 5;
+global.Flip = 1;
 </string>
           </argument>
         </arguments>
@@ -58,6 +59,14 @@ right_key = keyboard_check(vk_right);
 left_key = keyboard_check(vk_left);
 up_key = keyboard_check_pressed(vk_up);
 down_key = keyboard_check(vk_down);
+
+//flip function
+if(global.hsp &lt; 0) {
+    global.Flip = -1;
+}
+if(global.hsp &gt; 0) {
+    global.Flip = 1;
+}
 
 //actions to input
 
