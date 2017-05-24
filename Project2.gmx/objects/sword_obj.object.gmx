@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Flip = 1;
+            <string>
+Flip = 1;
 </string>
           </argument>
         </arguments>
@@ -48,12 +49,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>left_key = keyboard_check(vk_left);
-right_key = keyboard_check(vk_right);
-xpos = Player_obj.x;
+            <string>xpos = Player_obj.x;
 ypos = Player_obj.y;
-
-
 if(global.hsp &lt; 0) {
     Flip = -1;
 }
