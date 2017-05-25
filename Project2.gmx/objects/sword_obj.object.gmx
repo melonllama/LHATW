@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Screa = 1;
+            <string>Screa = 0;
 </string>
           </argument>
         </arguments>
@@ -53,11 +53,11 @@ ypos = Player_obj.y;
 
 //Weapon Switch
 if (Screa == 0 &amp;&amp; global.weaponSwitch == 0) {
-    instance_create(Player_obj.x,Player_obj.y,sword_obj);
+    instance_create(xpos,ypos,sword_obj);
     Screa=1;
 }
 
-if (global.weaponSwitch != 0) {
+if (Screa == 1 &amp;&amp; global.weaponSwitch != 0) {
     instance_destroy()
     Screa=0;
 }
