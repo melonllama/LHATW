@@ -26,10 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>// Variables
+global.phealth = 100;
 global.grav = 1;
 global.hsp = 0;
 global.vsp = 0;
-jsp = 18;
+jsp = 16.5;
 movespeed = 5;
 global.Flip = 1;
 global.weaponSwitch = 0;
