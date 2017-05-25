@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>health = 100
 ejsp = 5
+evsp = 0
 
 </string>
           </argument>
@@ -50,20 +51,41 @@ ejsp = 5
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (Player_obj.x &gt; x) {
+            <string>if (Player_obj.y &gt; y) {
+    ejump = 1
+    }
+    else {
+    ejump = 0
+    }
+    
+if (Player_obj.x &gt; x) {
     x += 3
     }
     else {
     x -= 3
     }
     
-if(global.vsp &lt; 10) {
-    global.vsp += global.grav;
+if(ejump = 1) {
+    evsp += global.grav;
+};
+if(ejump = 0) {
+    evsp -= global.grav
 };
 
-if(place_meeting(x,y+1,Wall_obj)){
-    global.vsp = up_key * -ejsp;
-};
+
+y += evsp
+
+    
+
+
+
+
+
+
+
+
+
+
         
     
 </string>
