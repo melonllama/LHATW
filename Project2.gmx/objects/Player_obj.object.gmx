@@ -33,6 +33,7 @@ jsp = 18;
 movespeed = 5;
 global.Flip = 1;
 global.weaponSwitch = 0;
+ejump = 0;
 </string>
           </argument>
         </arguments>

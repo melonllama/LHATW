@@ -51,11 +51,11 @@ evsp = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (Player_obj.y &gt; y) {
+            <string>if (Player_obj.y+30 &lt; obj_enemy.y) {
     ejump = 1
     }
-    else {
-    ejump = 0
+else if (Player_obj.y+30 &gt;= obj_enemy.y) {
+    ejump = 0;
     }
     
 if (Player_obj.x &gt; x) {
@@ -65,13 +65,19 @@ if (Player_obj.x &gt; x) {
     x -= 3
     }
     
+if(place_meeting(x,y+1,Wall_obj)) {
+    evsp = ejump * -3;
+}
     
+if(evsp &lt; 10) {
+    evsp += global.grav;
+};   
 //if(ejump = 1 &amp;&amp; place_meeting(x,y+1,Wall_obj)) {
    // evsp += ;
    //};
-if(ejump = 0) {
+/*if(ejump = 0) {
     evsp -= global.grav
-};
+};*/
 
 if (place_meeting(x,y+evsp,Wall_obj)){
     while(!place_meeting(x,y+sign(evsp),Wall_obj)) {
