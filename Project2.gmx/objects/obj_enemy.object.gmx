@@ -72,6 +72,13 @@ if(ejump = 0) {
     evsp -= global.grav
 };
 
+if (place_meeting(x,y+evsp,Wall_obj)){
+    while(!place_meeting(x,y+sign(evsp),Wall_obj)) {
+        y+=sign(evsp);
+    };
+    evsp = 0;
+};
+
 
 y += evsp
 
