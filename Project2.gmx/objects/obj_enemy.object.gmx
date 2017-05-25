@@ -65,9 +65,10 @@ if (Player_obj.x &gt; x) {
     x -= 3
     }
     
-if(ejump = 1) {
-    evsp += global.grav;
-};
+    
+//if(ejump = 1 &amp;&amp; place_meeting(x,y+1,Wall_obj)) {
+   // evsp += ;
+   //};
 if(ejump = 0) {
     evsp -= global.grav
 };
