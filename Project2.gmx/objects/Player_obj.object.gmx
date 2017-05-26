@@ -38,7 +38,11 @@ ejump = 0;
 Screa = 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 global.ammo = 100
+=======
+Gcrea = 0;
+>>>>>>> 3342852dc80b05a607c86ff87b5da01dc24cab43
 =======
 Gcrea = 0;
 >>>>>>> 3342852dc80b05a607c86ff87b5da01dc24cab43
