@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Screa = 0;
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -52,21 +51,14 @@
 ypos = Player_obj.y;
 
 //Weapon Switch
-if (Screa == 0 &amp;&amp; global.weaponSwitch == 0) {
-    instance_create(xpos,ypos,sword_obj);
-    Screa=1;
-}
 
-if (Screa == 1 &amp;&amp; global.weaponSwitch != 0) {
-    instance_destroy()
-    Screa=0;
-}
+
 
 image_xscale = global.Flip;
 x = xpos + (40*global.Flip);
 y = ypos;
 
-draw_text(Player_obj.x-100,Player_obj.y-100,"Screa="&amp;Screa);
+
 
 
 
