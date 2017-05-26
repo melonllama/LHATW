@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>health = 100
+            <string>life = 100
 ejsp = 15
 evsp = 0
 ehsp = 0
@@ -95,7 +95,7 @@ x += ehsp
 
 
 
-if (health &lt;= 0) {
+if (life &lt;= 0) {
 instance_destroy();
 }
 
@@ -134,7 +134,7 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>health -= 25
+            <string>life -= 25
 with (other) instance_destroy(); 
 </string>
           </argument>
