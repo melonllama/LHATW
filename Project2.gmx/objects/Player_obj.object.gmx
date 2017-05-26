@@ -36,7 +36,7 @@ global.Flip = 1;
 global.weaponSwitch = 0;
 ejump = 0;
 Screa = 0;
-Gcrea = 0;
+global.Gcrea = 0;
 global.ammo = 100; 
 </string>
           </argument>
@@ -121,16 +121,16 @@ if (Screa == 1 &amp;&amp; global.weaponSwitch != 0) {
 
 //Gun
 
-if (Gcrea == 0 &amp;&amp; global.weaponSwitch == 1) {
+if (global.Gcrea == 0 &amp;&amp; global.weaponSwitch == 1) {
     instance_create(x,y,obj_tom);
-    Gcrea=1;
+    global.Gcrea=1;
 }
 
-if (Gcrea == 1 &amp;&amp; global.weaponSwitch != 1) {
+if (global.Gcrea == 1 &amp;&amp; global.weaponSwitch != 1) {
     with(obj_tom) {
         instance_destroy();
     }
-    Gcrea=0;
+    global.Gcrea=0;
 }
 
 //collision

@@ -51,6 +51,12 @@ draw_set_color(c_black);
             <kind>1</kind>
             <string>draw_self();
 draw_text(x+150, y+10, global.ammo);
+
+if (global.ammo = 0 &amp;&amp; global.Gcrea = 1) 
+    {
+    draw_text(Player_obj.x - 37, Player_obj.y - 30, "No Ammo")
+};
+    
 </string>
           </argument>
         </arguments>
