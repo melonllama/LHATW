@@ -28,6 +28,7 @@
             <string>health = 100
 ejsp = 15
 evsp = 0
+ehsp = 0
 
 </string>
           </argument>
@@ -59,10 +60,10 @@ else if (Player_obj.y+30 &gt;= obj_enemy.y) {
     }
     
 if (Player_obj.x &gt; x) {
-    x += 2.3
+    ehsp = 2
     }
     else {
-    x -= 2
+    ehsp = -2
     }
     
 if(place_meeting(x,y+1,Wall_obj)) {
@@ -72,12 +73,7 @@ if(place_meeting(x,y+1,Wall_obj)) {
 if(evsp &lt; 10) {
     evsp += global.grav;
 };   
-//if(ejump = 1 &amp;&amp; place_meeting(x,y+1,Wall_obj)) {
-   // evsp += ;
-   //};
-/*if(ejump = 0) {
-    evsp -= global.grav
-};*/
+
 
 if (place_meeting(x,y+evsp,Wall_obj)){
     while(!place_meeting(x,y+sign(evsp),Wall_obj)) {
@@ -88,12 +84,18 @@ if (place_meeting(x,y+evsp,Wall_obj)){
 
 y += evsp
 
-//if (place_meeting(x,y,obj_bullet)) {
-//health -= 10
-//with (obj_bullet) instance_destroy(); 
-//}
+if (place_meeting(x+ehsp,y,Wall_obj)){
+    while(!place_meeting(x+sign(ehsp),y,Wall_obj)) {
+        x+=sign(ehsp);
+    };
+    ehsp = 0;
+};
 
-if (health &lt; 0) {
+x += ehsp
+
+
+
+if (health &lt;= 0) {
 instance_destroy();
 }
 
