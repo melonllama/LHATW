@@ -36,6 +36,7 @@ global.Flip = 1;
 global.weaponSwitch = 0;
 ejump = 0;
 Screa = 0;
+Gcrea = 0;
 </string>
           </argument>
         </arguments>
@@ -103,6 +104,8 @@ if(gun_key == 1) {
 
 //Gun Switching
 
+//Sword
+
 if (Screa == 0 &amp;&amp; global.weaponSwitch == 0) {
     instance_create(x,y,sword_obj);
     Screa=1;
@@ -113,6 +116,20 @@ if (Screa == 1 &amp;&amp; global.weaponSwitch != 0) {
         instance_destroy();
     }
     Screa=0;
+}
+
+//Gun
+
+if (Gcrea == 0 &amp;&amp; global.weaponSwitch == 1) {
+    instance_create(x,y,obj_tom);
+    Gcrea=1;
+}
+
+if (Gcrea == 1 &amp;&amp; global.weaponSwitch != 1) {
+    with(obj_tom) {
+        instance_destroy();
+    }
+    Gcrea=0;
 }
 
 //collision
