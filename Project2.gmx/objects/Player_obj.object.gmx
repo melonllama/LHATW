@@ -37,6 +37,7 @@ global.weaponSwitch = 0;
 ejump = 0;
 Screa = 0;
 Gcrea = 0;
+global.ammo = 100; 
 </string>
           </argument>
         </arguments>
