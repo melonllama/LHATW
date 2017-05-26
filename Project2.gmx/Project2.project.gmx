@@ -13,7 +13,6 @@
     <sprite>sprites\spr_tom</sprite>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_enemy</sprite>
-    <sprite>sprites\spr_score</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -25,7 +24,6 @@
     <object>objects\obj_tom</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_enemy</object>
-    <object>objects\obj_score</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Test_rm</room>
