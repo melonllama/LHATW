@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>swrhsp = 0;
+counter = 0;
+attyes = 0;
+swa = 0;
+</string>
           </argument>
         </arguments>
       </action>
@@ -49,16 +53,33 @@
             <kind>1</kind>
             <string>xpos = Player_obj.x;
 ypos = Player_obj.y;
+attack = keyboard_check(vk_space);
 
-//Weapon Switch
+if (attack == 1) {
+    attyes = 1;
+}
 
-
+if (counter == 60) {
+    attyes = 0;
+    counter = 0;
+} else {
+    counter += 1;
+}
+if (attyes == 1 &amp;&amp; swa == 0) {
+        swa = 1;
+        instance_create(Player_obj.x,Player_obj.y,Swordhit_obj);
+} else if (attyes ==0) {
+    with(Swordhit_obj) {
+        instance_destroy();
+    }
+}
+//if(att
 
 image_xscale = global.Flip;
 x = xpos + (40*global.Flip);
 y = ypos;
 
-
+x+= swrhsp
 
 
 
