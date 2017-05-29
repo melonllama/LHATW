@@ -39,8 +39,12 @@ Screa = 0;
 global.Gcrea = 0;
 global.ammo = 100; 
 health = 100
+<<<<<<< HEAD
 kbcounter = 4
 kbdistance = 1
+=======
+kbcounter = 0;
+>>>>>>> 95be58e175425aa9f9d2c75427d1c9a9491a6767
 </string>
           </argument>
         </arguments>
@@ -70,7 +74,7 @@ up_key = keyboard_check_pressed(vk_up);
 down_key = keyboard_check(vk_down);
 sword_key = keyboard_check_pressed(ord('1'));
 gun_key = keyboard_check_pressed(ord('2'));
-
+kbdr = sign(Player_obj.x - obj_enemy.x);
 //flip function
 if(global.hsp &lt; 0) {
     global.Flip = -1;
@@ -155,6 +159,17 @@ if (place_meeting(x,y+global.vsp,Wall_obj)){
 y+=global.vsp;
 
 //Health
+
+if (place_meeting(x, y, obj_enemy)) {
+kbcounter = 0
+health -= 10
+
+}
+
+if (kbcounter &lt; 4) {
+x -= (10 * sign(kbdr))
+kbcounter += 1
+}
  
 //KnockBack
 
