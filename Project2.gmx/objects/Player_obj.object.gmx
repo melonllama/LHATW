@@ -158,14 +158,8 @@ y+=global.vsp;
  
 //KnockBack
 
-if (place_meeting(x, y, obj_enemy)) {
-with (other)
-kbcounter = 0
-health -= 10
-}
-
 if (kbcounter &lt; 4) {
-x -= (10 * sign(kbdr))
+x -= (10 * sign(global.kbdr))
 kbcounter += 1
 }
 
@@ -173,6 +167,33 @@ kbcounter += 1
 
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_enemy">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>health -= 10
+kbcounter = 0
+with (other) {
+global.kbdr = (self.x - Player_obj.x)
+}
 </string>
           </argument>
         </arguments>
