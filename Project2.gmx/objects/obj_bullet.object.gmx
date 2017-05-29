@@ -73,9 +73,8 @@ bps = 25 * global.Flip
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//with (other) instance_destroy();
-instance_destroy();
-//The second InsDestroy is necessary
+            <string>instance_destroy();
+
 </string>
           </argument>
         </arguments>

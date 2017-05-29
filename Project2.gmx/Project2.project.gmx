@@ -32,6 +32,7 @@
     <object>objects\obj_ammobag</object>
     <object>objects\Swordhit_obj</object>
     <object>objects\obj_shotty</object>
+    <object>objects\obj_sbullet</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Test_rm</room>
