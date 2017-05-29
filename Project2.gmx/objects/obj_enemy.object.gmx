@@ -142,6 +142,7 @@ instance_destroy();
             <kind>1</kind>
             <string>life -= 25
 with (other) instance_destroy();
+kbcounter = 0
 </string>
           </argument>
         </arguments>
