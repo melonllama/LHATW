@@ -162,14 +162,14 @@ y+=global.vsp;
 //KnockBack
 
 if (kbcounter &lt; 4) {
-x -= (10 * sign(global.kbdr))
-kbcounter += 1
+    x -= (10 * sign(global.kbdr))
+    kbcounter += 1
 }
 if (icounter &lt; 30) {
-invis = 1
-icounter += 1
+    invis = 1
+    icounter += 1
 } else {
-invis = 0
+    invis = 0
 }
 
 
