@@ -77,10 +77,10 @@ gun_key = keyboard_check_pressed(ord('2'));
 shotty_key = keyboard_check_pressed(ord('3'));
 
 //flip function
-if(global.hsp &lt; 0) {
+if(left_key == 1) {
     global.Flip = -1;
 }
-if(global.hsp &gt; 0) {
+if(right_key == 1) {
     global.Flip = 1;
 }
 
@@ -162,7 +162,7 @@ if (global.SHcrea == 1 &amp;&amp; global.weaponSwitch != 2) {
 //KnockBack
 
 if (kbcounter &lt; 4) {
-    x += (10 * -sign(global.kbdr))
+    global.hsp += (10 * -sign(global.kbdr))
     kbcounter += 1
 }
 if (icounter &lt; 30) {

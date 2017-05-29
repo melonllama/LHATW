@@ -61,10 +61,10 @@ else if (Player_obj.y+30 &gt;= obj_enemy.y) {
     }
     
 if (Player_obj.x &gt; x) {
-    ehsp = 3
+    ehsp = 10
     }
     else {
-    ehsp = -3
+    ehsp = -10
     }
     
 if(place_meeting(x,y+1,Wall_obj)) {
@@ -105,12 +105,7 @@ if (place_meeting(x+ehsp,y,Wall_obj)){
 
 x += ehsp
 
-if (place_meeting(x+kbdistance,y,Wall_obj)){
-    while(!place_meeting(x+sign(kbdistance),y,Wall_obj)) {
-        x+=sign(kbdistance);
-    };
-    kbdistance = 15;
-};
+
 
 
     
