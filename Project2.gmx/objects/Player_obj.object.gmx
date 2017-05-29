@@ -39,6 +39,8 @@ Screa = 0;
 global.Gcrea = 0;
 global.ammo = 100; 
 health = 100
+kbcounter = 4
+kbdistance = 1
 </string>
           </argument>
         </arguments>
@@ -154,38 +156,21 @@ y+=global.vsp;
 
 //Health
  
+//KnockBack
 
-
-
-
-
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_enemy">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>health -= 10
-with (other) {
-x += (2.5 * (x - Player_obj.x))
+if (place_meeting(x, y, obj_enemy)) {
+kbcounter = 0
+health -= 10
 }
+
+if (kbcounter &lt; 4) {
+x -= (10 * sign(kbdr))
+kbcounter += 1
+}
+
+
+
+
 
 </string>
           </argument>
