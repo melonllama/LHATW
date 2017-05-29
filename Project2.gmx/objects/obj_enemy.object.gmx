@@ -67,7 +67,7 @@ if (Player_obj.x &gt; x) {
     }
     
 if(place_meeting(x,y+1,Wall_obj)) {
-    evsp = ejump * -16.5;
+    evsp = ejump * -10.5;
 }
     
 if(evsp &lt; 10) {
