@@ -26,9 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>swrhsp = 0;
-counter = 0;
+scounter = 0;
 global.attyes = 0;
 swa = 0;
+attcool = 0;
+ccounter = 0;
 </string>
           </argument>
         </arguments>
@@ -55,15 +57,16 @@ swa = 0;
 ypos = Player_obj.y;
 attack = keyboard_check_pressed(vk_space);
 
-if (attack == 1) {
+if (attack == 1 &amp;&amp; attcool == 0) {
     global.attyes = 1;
 }
 
-if (counter == 30) {
+if (scounter == 10) {
     global.attyes = 0;
-    counter = 0;
+    scounter = 0;
+    attcool = 1;
 } else if(global.attyes == 1) {
-    counter += 1;
+    scounter += 1;
 }
 if (global.attyes == 1 &amp;&amp; swa == 0) {
         swa = 1;
@@ -73,6 +76,19 @@ if (global.attyes == 1 &amp;&amp; swa == 0) {
         instance_destroy();
     }
     swa = 0;
+}
+
+if (ccounter == 30) {
+    attcool = 0;
+    ccounter = 0;
+} else if (attcool == 1) {
+    ccounter += 1
+}
+
+if (global.attyes == 1) {
+    swrhsp = 5 * global.Flip
+} else if (global.attyes == 0) {
+    swrhsp = -5 * global.Flip
 }
 
 image_xscale = global.Flip;
