@@ -162,7 +162,7 @@ if (global.SHcrea == 1 &amp;&amp; global.weaponSwitch != 2) {
 //KnockBack
 
 if (kbcounter &lt; 4) {
-    global.hsp = (10 * -sign(global.kbdr))
+    x += (10 * -sign(global.kbdr))
     kbcounter += 1
 }
 if (icounter &lt; 30) {
