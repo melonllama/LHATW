@@ -61,7 +61,7 @@ if (attack == 1 &amp;&amp; attcool == 0) {
     global.attyes = 1;
 }
 
-if (scounter == 10) {
+if (scounter == 5) {
     global.attyes = 0;
     scounter = 0;
     attcool = 1;
