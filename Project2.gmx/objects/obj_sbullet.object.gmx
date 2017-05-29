@@ -28,7 +28,7 @@
             <string>x = (global.gunx + (10 * global.Flip))
 y = global.guny
 bps = 25 * global.Flip
-vbps = random_range(-10, 10)
+vbps = random_range(-3, 10)
 </string>
           </argument>
         </arguments>

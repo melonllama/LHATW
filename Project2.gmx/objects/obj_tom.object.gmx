@@ -30,7 +30,7 @@
 bsp = 10;
 global.guny = Player_obj.y ;
 global.gunx = Player_obj.x - 20;
-
+fcounter = 3
 
 
 </string>
@@ -63,6 +63,16 @@ if (keyboard_check_pressed(vk_space) &amp;&amp; global.ammo &gt; 0)
     {
 instance_create(global.gunx, global.guny, obj_bullet);
 global.ammo -= 1
+instance_create(global.gunx + (30 * global.Flip), global.guny, obj_flash)
+fcounter = 0
+    }
+if (fcounter &lt; 3) {
+fcounter += 1
+}
+if (fcounter = 3) {
+with (obj_flash) {
+instance_destroy()
+    }
     }
     
 

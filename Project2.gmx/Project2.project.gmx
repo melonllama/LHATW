@@ -17,6 +17,7 @@
     <sprite>sprites\spr_ammobag</sprite>
     <sprite>sprites\Swordhit_spr</sprite>
     <sprite>sprites\spr_shotty</sprite>
+    <sprite>sprites\spr_flash</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -33,6 +34,7 @@
     <object>objects\Swordhit_obj</object>
     <object>objects\obj_shotty</object>
     <object>objects\obj_sbullet</object>
+    <object>objects\obj_flash</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Test_rm</room>
