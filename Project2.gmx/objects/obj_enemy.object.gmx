@@ -94,18 +94,19 @@ if (place_meeting(x+ehsp,y,Wall_obj)){
 
 x += ehsp
 
-
-if (kbcounter &lt; 4) {
-x += (kbdistance * sign(global.kbdr))
-kbcounter += 1
-}
-
 if (place_meeting(x+kbdistance,y,Wall_obj)){
     while(!place_meeting(x+sign(kbdistance),y,Wall_obj)) {
         x+=sign(kbdistance);
     };
     kbdistance = 15;
 };
+
+if (kbcounter &lt; 4) {
+x += (kbdistance * sign(global.kbdr))
+kbcounter += 1
+}
+
+
 
 if (life &lt;= 0) {
 instance_destroy();
