@@ -29,6 +29,7 @@
 ejsp = 15
 evsp = 0
 ehsp = 0
+kbcounter = 4
 
 </string>
           </argument>
@@ -92,6 +93,9 @@ if (place_meeting(x+ehsp,y,Wall_obj)){
 };
 
 x += ehsp
+
+
+
 
 
 

@@ -41,6 +41,7 @@ global.ammo = 100;
 health = 100
 kbcounter = 4
 kbdistance = 1
+global.kbdr = 3
 </string>
           </argument>
         </arguments>
