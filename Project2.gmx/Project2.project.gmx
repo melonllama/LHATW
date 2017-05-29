@@ -16,6 +16,7 @@
     <sprite>sprites\spr_score</sprite>
     <sprite>sprites\spr_ammobag</sprite>
     <sprite>sprites\Swordhit_spr</sprite>
+    <sprite>sprites\spr_shotty</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -30,6 +31,7 @@
     <object>objects\obj_score</object>
     <object>objects\obj_ammobag</object>
     <object>objects\Swordhit_obj</object>
+    <object>objects\obj_shotty</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Test_rm</room>
