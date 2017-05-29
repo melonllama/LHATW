@@ -158,6 +158,21 @@ if (global.SHcrea == 1 &amp;&amp; global.weaponSwitch != 2) {
     global.SHcrea=0;
 }
 
+
+//KnockBack
+
+if (kbcounter &lt; 4) {
+    global.hsp = (10 * -sign(global.kbdr))
+    kbcounter += 1
+}
+if (icounter &lt; 30) {
+    invis = 1
+    icounter += 1
+} else {
+    invis = 0
+}
+
+
 //collision
 
 if (place_meeting(x+global.hsp,y,Wall_obj)){
@@ -177,19 +192,6 @@ if (place_meeting(x,y+global.vsp,Wall_obj)){
 y+=global.vsp;
 
 //Health
-
-//KnockBack
-
-if (kbcounter &lt; 4) {
-    x -= (10 * sign(global.kbdr))
-    kbcounter += 1
-}
-if (icounter &lt; 30) {
-    invis = 1
-    icounter += 1
-} else {
-    invis = 0
-}
 
 
 

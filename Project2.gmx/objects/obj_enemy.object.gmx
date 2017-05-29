@@ -61,10 +61,10 @@ else if (Player_obj.y+30 &gt;= obj_enemy.y) {
     }
     
 if (Player_obj.x &gt; x) {
-    ehsp = 2
+    ehsp = 3
     }
     else {
-    ehsp = -2
+    ehsp = -3
     }
     
 if(place_meeting(x,y+1,Wall_obj)) {
@@ -75,6 +75,17 @@ if(evsp &lt; 10) {
     evsp += global.grav;
 };   
 
+
+if (kbcounter &lt; 4) {
+    ehsp = (kbdistance * sign(global.kbdr))
+    kbcounter += 1
+}
+
+
+
+if (life &lt;= 0) {
+    instance_destroy();
+}
 
 if (place_meeting(x,y+evsp,Wall_obj)){
     while(!place_meeting(x,y+sign(evsp),Wall_obj)) {
@@ -101,16 +112,6 @@ if (place_meeting(x+kbdistance,y,Wall_obj)){
     kbdistance = 15;
 };
 
-if (kbcounter &lt; 4) {
-x += (kbdistance * sign(global.kbdr))
-kbcounter += 1
-}
-
-
-
-if (life &lt;= 0) {
-instance_destroy();
-}
 
     
 
