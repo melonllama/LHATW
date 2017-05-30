@@ -45,6 +45,7 @@ global.kbdr = 3
 invis = 0
 icounter = 0
 global.SHcrea = 0
+global.MGcrea = 0
 </string>
           </argument>
         </arguments>
@@ -75,6 +76,7 @@ down_key = keyboard_check(vk_down);
 sword_key = keyboard_check_pressed(ord('1'));
 gun_key = keyboard_check_pressed(ord('2'));
 shotty_key = keyboard_check_pressed(ord('3'));
+mgun_key = keyboard_check_pressed(ord('4'));
 
 //flip function
 if(left_key == 1) {
@@ -112,6 +114,9 @@ if(gun_key == 1) {
 }
 if(shotty_key == 1) {
     global.weaponSwitch = 2;    
+}
+if(mgun_key == 1) {
+    global.weaponSwitch = 3;    
 }
 
 //Gun Switching
@@ -156,6 +161,20 @@ if (global.SHcrea == 1 &amp;&amp; global.weaponSwitch != 2) {
         instance_destroy();
     }
     global.SHcrea=0;
+}
+
+//Minigun
+
+if (global.MGcrea == 0 &amp;&amp; global.weaponSwitch == 3) {
+    instance_create(x,y,obj_minigun);
+    global.MGcrea = 1;
+}
+
+if (global.MGcrea == 1 &amp;&amp; global.weaponSwitch != 3) {
+    with(obj_minigun) {
+        instance_destroy();
+    }
+    global.MGcrea=0;
 }
 
 

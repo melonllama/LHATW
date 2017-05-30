@@ -19,10 +19,10 @@
     <sprite>sprites\spr_shotty</sprite>
     <sprite>sprites\spr_flash</sprite>
     <sprite>sprites\spr_flyingenemy</sprite>
+    <sprite>sprites\spr_minigun</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <scripts name="scripts"/>
   <objects name="objects">
     <object>objects\sword_obj</object>
     <object>objects\Player_obj</object>
@@ -38,6 +38,8 @@
     <object>objects\obj_sbullet</object>
     <object>objects\obj_flash</object>
     <object>objects\obj_flyingenemy</object>
+    <object>objects\obj_minigun</object>
+    <object>objects\obj_mgbullet</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Test_rm</room>

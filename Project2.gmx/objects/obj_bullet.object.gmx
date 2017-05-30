@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>x = (global.gunx + (10 * global.Flip))
 y = global.guny
-bps = 25 * global.Flip
+bps = 15 * global.Flip
 </string>
           </argument>
         </arguments>
