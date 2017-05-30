@@ -20,6 +20,8 @@
     <sprite>sprites\spr_flash</sprite>
     <sprite>sprites\spr_flyingenemy</sprite>
     <sprite>sprites\spr_minigun</sprite>
+    <sprite>sprites\sprite14</sprite>
+    <sprite>sprites\spr_fast_enemy</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -40,6 +42,7 @@
     <object>objects\obj_flyingenemy</object>
     <object>objects\obj_minigun</object>
     <object>objects\obj_mgbullet</object>
+    <object>objects\obj_fast_enemy</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Test_rm</room>
