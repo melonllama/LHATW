@@ -51,8 +51,12 @@ qsand = 0
             <kind>1</kind>
             <string>if place_meeting(x, y, obj_qsand) {
 qsand = 1
+} else {
+qsand = 0
 }
-global.vsp += (qsand * qvsp)
+if (qsand = 1) {
+global.vsp = (qsand * qvsp)
+}
 </string>
           </argument>
         </arguments>
