@@ -63,7 +63,7 @@ if (keyboard_check(vk_space) &amp;&amp; global.ammo &gt; 0 &amp;&amp; scounter =
     {
 instance_create(global.gunx, global.guny, obj_bullet);
 global.ammo -= 1
-instance_create(global.gunx + (30 * global.Flip), global.guny, obj_flash)
+instance_create(global.gunx + (37 * global.Flip), global.guny + 3, obj_flash)
 fcounter = 0
 scounter = 0
     }
