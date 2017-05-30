@@ -32,6 +32,7 @@
     <object>objects\Player_obj</object>
     <object>objects\Wall_obj</object>
     <object>objects\Girder_obj</object>
+    <object>objects\obj_qsand</object>
     <object>objects\obj_tom</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_enemy</object>
@@ -45,7 +46,6 @@
     <object>objects\obj_minigun</object>
     <object>objects\obj_mgbullet</object>
     <object>objects\obj_fast_enemy</object>
-    <object>objects\obj_qsand</object>
     <object>objects\obj_ebullet</object>
     <object>objects\obj_stenemy</object>
   </objects>
