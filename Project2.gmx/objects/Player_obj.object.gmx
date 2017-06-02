@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>self</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -38,14 +38,16 @@ ejump = 0;
 Screa = 0;
 global.Gcrea = 0;
 global.ammo = 100; 
-health = 100
-kbcounter = 4
-kbdistance = 1
-global.kbdr = 3
-invis = 0
-icounter = 0
-global.SHcrea = 0
-global.MGcrea = 0
+health = 100;
+kbcounter = 4;
+kbdistance = 1;
+global.kbdr = 3;
+invis = 0;
+icounter = 0;
+global.SHcrea = 0;
+global.MGcrea = 0;
+global.qsandspeed = 0;
+global.qsandmax = 1;
 </string>
           </argument>
         </arguments>
@@ -96,10 +98,21 @@ if(right_key == 1){
     global.hsp = 0;
 };  
 
+if(place_meeting(x,y+1,obj_qsand)) {
+    global.qsandspeed = .99
+    global.qsandmax = 5;
+} else {
+    global.qsandspeed = 0;
+    global.qsandmax = 1;
+}
 
-if(global.vsp &lt; 10) {
-    global.vsp += global.grav;
+if(global.vsp &lt; 10/global.qsandmax) {
+    global.vsp += global.grav - global.qsandspeed;
 };
+
+if(place_meeting(x,y,obj_qsand) &amp;&amp; up_key == 1) {
+    global.vsp = -jsp
+}
 
 if(place_meeting(x,y+1,Wall_obj)){
     global.vsp = up_key * -jsp;
