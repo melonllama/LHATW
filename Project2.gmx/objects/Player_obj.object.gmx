@@ -48,6 +48,7 @@ global.SHcrea = 0;
 global.MGcrea = 0;
 global.qsandspeed = 0;
 global.qsandmax = 1;
+global.qsandjump = 0;
 </string>
           </argument>
         </arguments>
@@ -73,7 +74,7 @@ global.qsandmax = 1;
             <string>//player input
 right_key = keyboard_check(vk_right);
 left_key = keyboard_check(vk_left);
-up_key = keyboard_check_pressed(vk_up);
+up_key = keyboard_check(vk_up);
 down_key = keyboard_check(vk_down);
 sword_key = keyboard_check_pressed(ord('1'));
 gun_key = keyboard_check_pressed(ord('2'));
@@ -101,18 +102,22 @@ if(right_key == 1){
 if(place_meeting(x,y+1,obj_qsand)) {
     global.qsandspeed = .99
     global.qsandmax = 5;
+    jsp= 5;
+    movespeed = 1;
 } else {
     global.qsandspeed = 0;
     global.qsandmax = 1;
+    jsp = 16.5;
+    movespeed = 5;
+}
+
+if(place_meeting(x,y,obj_qsand) &amp;&amp; global.vsp &gt; 2) {
+    global.vsp = 0;
 }
 
 if(global.vsp &lt; 10/global.qsandmax) {
     global.vsp += global.grav - global.qsandspeed;
 };
-
-if(place_meeting(x,y,obj_qsand) &amp;&amp; up_key == 1) {
-    global.vsp = -jsp
-}
 
 if(place_meeting(x,y+1,Wall_obj)){
     global.vsp = up_key * -jsp;
