@@ -74,7 +74,7 @@ global.qsandjump = 0;
             <string>//player input
 right_key = keyboard_check(vk_right);
 left_key = keyboard_check(vk_left);
-up_key = keyboard_check(vk_up);
+up_key = keyboard_check_pressed(vk_up);
 down_key = keyboard_check(vk_down);
 sword_key = keyboard_check_pressed(ord('1'));
 gun_key = keyboard_check_pressed(ord('2'));
@@ -100,9 +100,9 @@ if(right_key == 1){
 };  
 
 if(place_meeting(x,y+1,obj_qsand)) {
-    global.qsandspeed = .99
-    global.qsandmax = 5;
-    jsp= 5;
+    global.qsandspeed = .6
+    global.qsandmax = 9;
+    jsp= 2;
     movespeed = 1;
 } else {
     global.qsandspeed = 0;
