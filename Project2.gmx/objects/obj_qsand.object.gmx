@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>cons = 100;
-vsp = 1
+vsp = 0;
 </string>
           </argument>
         </arguments>
@@ -52,8 +52,14 @@ vsp = 1
             <string>if (cons &lt;= 0) {
 instance_destroy();
 }
-//y += vsp
-//vsp += 1
+
+if(!place_meeting(x,y+1,Wall_obj)) {
+    vsp+=global.grav;
+} else {
+    vsp=0;
+}
+
+y+=vsp; 
 </string>
           </argument>
         </arguments>
