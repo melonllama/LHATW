@@ -49,6 +49,8 @@ global.MGcrea = 0;
 global.qsandspeed = 0;
 global.qsandmax = 1;
 global.qsandjump = 0;
+djcounter = 0
+djump = 1
 </string>
           </argument>
         </arguments>
@@ -119,9 +121,14 @@ if(global.vsp &lt; 10/global.qsandmax) {
     global.vsp += global.grav - global.qsandspeed;
 };
 
-if(place_meeting(x,y+1,Wall_obj)){
-    global.vsp = up_key * -jsp;
+if(place_meeting(x,y+1,Wall_obj)){  
+    djump = 1
 };
+if (djump &gt;= 0 &amp;&amp;  up_key = 1) {
+global.vsp = -jsp;
+djump -= 1
+};
+
 
 if(sword_key == 1) {
     global.weaponSwitch = 0;
