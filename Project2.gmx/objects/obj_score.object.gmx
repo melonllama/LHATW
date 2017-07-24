@@ -52,6 +52,7 @@ draw_set_color(c_black);
             <string>draw_self();
 draw_text(x+150, y+10, global.ammo);
 draw_text(x+200, y+10, global.DTP);
+draw_text(x+150, y+50, global.sjcounter);
 
 
 if (global.ammo = 0 &amp;&amp; global.Gcrea = 1) 

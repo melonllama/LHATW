@@ -51,7 +51,7 @@ global.qsandmax = 1;
 global.qsandjump = 0;
 djcounter = 0
 djump = 1
-sjcounter = 0
+global.sjcounter = 0
 sjdelay = 0
 </string>
           </argument>
@@ -220,22 +220,26 @@ if (icounter &lt; 30) {
 
 //SideJump
 
-if (keyboard_check_pressed(vk_right) || keyboard_check_pressed(vk_left)) {
-sjcounter = 30
+if ((keyboard_check_pressed(vk_right) || keyboard_check_pressed(vk_left)) &amp;&amp; sjdelay &gt; 0) {
+global.sjcounter = 15
+sjdelay = 0
 }
-if ((keyboard_check_pressed(vk_right) || keyboard_check_pressed(vk_left)) &amp;&amp; sjcounter &gt; 0 &amp;&amp; sjdelay = 0) {
-global.hsp += 60 * global.Flip
-sjcounter = 0
+if ((keyboard_check_pressed(vk_right) || keyboard_check_pressed(vk_left)) &amp;&amp; sjdelay = 0) {
+sjdelay = 15
 }
-if (sjcounter &gt; 0) {
-sjcounter -= 1
+if (global.sjcounter &gt; 0) {
+global.sjcounter -= 1
+global.hsp += (global.sjcounter * global.Flip)
 }
-if (
+if (sjdelay &gt; 0) {
+sjdelay -= 1
+}
+
 
 
 //collision
 
-if (place_meeting(x+global.hsp,y,Wall_obj)){
+if (place_meeting(x + global.hsp, y ,Wall_obj)) {
     while(!place_meeting(x+sign(global.hsp),y,Wall_obj)) {
         x+=sign(global.hsp);
     };
