@@ -61,10 +61,10 @@ else if (Player_obj.y+30 &gt;= obj_enemy.y) {
     }
     
 if (Player_obj.x &gt; x) {
-    ehsp = 4
+    ehsp = 3
     }
     else {
-    ehsp = -4
+    ehsp = -3
     }
     
 if(place_meeting(x,y+1,Wall_obj)) {
