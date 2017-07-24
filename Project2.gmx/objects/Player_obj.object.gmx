@@ -52,6 +52,7 @@ global.qsandjump = 0;
 djcounter = 0
 djump = 1
 sjcounter = 0
+sjdelay = 0
 </string>
           </argument>
         </arguments>
@@ -222,13 +223,14 @@ if (icounter &lt; 30) {
 if (keyboard_check_pressed(vk_right) || keyboard_check_pressed(vk_left)) {
 sjcounter = 30
 }
-if ((keyboard_check_pressed(vk_right) || keyboard_check_pressed(vk_left)) &amp;&amp; sjcounter &gt; 0 ) {
+if ((keyboard_check_pressed(vk_right) || keyboard_check_pressed(vk_left)) &amp;&amp; sjcounter &gt; 0 &amp;&amp; sjdelay = 0) {
 global.hsp += 60 * global.Flip
 sjcounter = 0
 }
 if (sjcounter &gt; 0) {
 sjcounter -= 1
 }
+if (
 
 
 //collision
