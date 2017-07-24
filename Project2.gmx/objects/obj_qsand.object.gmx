@@ -59,6 +59,29 @@ if(!place_meeting(x,y+1,Wall_obj)) {
     vsp=0;
 }
 
+if(!place_meeting(x,y+1,obj_qsand)) {
+    vsp+=global.grav;
+} else {
+    vsp=0;
+}
+
+
+//collision of the y axis
+
+if (place_meeting(x,y+vsp,Wall_obj)){
+    while(!place_meeting(x,y+sign(vsp),Wall_obj)) {
+        y+=sign(vsp);
+    };
+    vsp = 0;
+};
+
+if (place_meeting(x,y+vsp,obj_qsand)){
+    while(!place_meeting(x,y+sign(vsp),obj_qsand)) {
+        y+=sign(vsp);
+    };
+    vsp = 0;
+};
+
 y+=vsp; 
 </string>
           </argument>
