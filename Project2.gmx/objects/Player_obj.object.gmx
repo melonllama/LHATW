@@ -230,6 +230,7 @@ sjdelay = 15
 if (global.sjcounter &gt; 0) {
 global.sjcounter -= 1
 global.hsp += (global.sjcounter * global.Flip)
+global.vsp -= global.vsp
 }
 if (sjdelay &gt; 0) {
 sjdelay -= 1
