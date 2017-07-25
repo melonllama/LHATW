@@ -53,6 +53,7 @@ djcounter = 0
 djump = 1
 global.sjcounter = 0
 sjdelay = 0
+sjump = 0
 </string>
           </argument>
         </arguments>
@@ -125,6 +126,7 @@ if(global.vsp &lt; 10/global.qsandmax) {
 
 if(place_meeting(x,y+1,Wall_obj)){  
     djump = 1
+    sjump = 0
 };
 if (djump &gt;= 0 &amp;&amp;  up_key = 1) {
 global.vsp = -jsp;
@@ -220,9 +222,10 @@ if (icounter &lt; 30) {
 
 //SideJump
 
-if ((keyboard_check_pressed(vk_right) || keyboard_check_pressed(vk_left)) &amp;&amp; sjdelay &gt; 0) {
+if ((keyboard_check_pressed(vk_right) || keyboard_check_pressed(vk_left)) &amp;&amp; sjdelay &gt; 0 &amp;&amp; sjump = 0) {
 global.sjcounter = 15
 sjdelay = 0
+sjump = 1
 }
 if ((keyboard_check_pressed(vk_right) || keyboard_check_pressed(vk_left)) &amp;&amp; sjdelay = 0) {
 sjdelay = 15
@@ -230,13 +233,13 @@ sjdelay = 15
 if (global.sjcounter &gt; 0) {
 global.sjcounter -= 1
 global.hsp += (global.sjcounter * global.Flip)
+if (global.sjcounter &gt; 5) {
 global.vsp -= global.vsp
+}
 }
 if (sjdelay &gt; 0) {
 sjdelay -= 1
 }
-
-
 
 //collision
 
@@ -246,7 +249,6 @@ if (place_meeting(x + global.hsp, y ,Wall_obj)) {
     };
     global.hsp = 0;
 };
-x+=global.hsp;
 
 if (place_meeting(x,y+global.vsp,Wall_obj)){
     while(!place_meeting(x,y+sign(global.vsp),Wall_obj)) {
@@ -254,7 +256,13 @@ if (place_meeting(x,y+global.vsp,Wall_obj)){
     };
     global.vsp = 0;
 };
+
+if (global.hsp = 0) {
+global.sjcounter = 0
+}
+
 y+=global.vsp;
+x+=global.hsp;
 
 
 //Health
