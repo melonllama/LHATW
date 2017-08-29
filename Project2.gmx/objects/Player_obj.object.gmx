@@ -295,12 +295,12 @@ x+=global.hsp;
             <kind>1</kind>
             <string>if (invis = 0) {
 health -= 10
-kbcounter = -3
 with (other) {
 global.kbdr = (self.x - Player_obj.x)
 }
 icounter = 0
 }
+kbcounter = -3
 </string>
           </argument>
         </arguments>
@@ -325,12 +325,12 @@ icounter = 0
             <kind>1</kind>
             <string>if (invis = 0) {
 health -= 10
-kbcounter = 0
 with (other) {
 global.kbdr = (self.x - Player_obj.x)
 }
 icounter = 0
 }
+kbcounter = 0
 </string>
           </argument>
         </arguments>
@@ -355,12 +355,12 @@ icounter = 0
             <kind>1</kind>
             <string>if (invis = 0) {
 health -= 10
-kbcounter = 0
 with (other) {
 global.kbdr = (self.x - Player_obj.x)
 }
 icounter = 0
 }
+kbcounter = 0
 </string>
           </argument>
         </arguments>
