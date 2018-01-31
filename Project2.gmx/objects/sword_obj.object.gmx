@@ -61,7 +61,7 @@ if (attack == 1 &amp;&amp; attcool == 0) {
     global.attyes = 1;
 }
 
-if (scounter == 5) {
+if (scounter == 15) {
     global.attyes = 0;
     scounter = 0;
     attcool = 1;
@@ -71,7 +71,7 @@ if (scounter == 5) {
 if (global.attyes == 1 &amp;&amp; swa == 0) {
         swa = 1;
         instance_create(Player_obj.x,Player_obj.y,Swordhit_obj);
-} else if (global.attyes ==0) {
+} else if (global.attyes == 0) {
     with(Swordhit_obj) {
         instance_destroy();
     }

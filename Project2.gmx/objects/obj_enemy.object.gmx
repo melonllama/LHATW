@@ -61,13 +61,13 @@ else if (Player_obj.y+30 &gt;= obj_enemy.y) {
     }
     
 if (Player_obj.x &gt; x) {
-    ehsp = 4
+    ehsp = 3
     }
     else {
-    ehsp = -4
+    ehsp = -3
     }
     
-if(place_meeting(x,y+1,Wall_obj)) {
+if(place_meeting(x,y + 1,Wall_obj)) {
     evsp = ejump * -10.5;
 }
     
@@ -193,9 +193,9 @@ kbcounter = 3
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>life -= 25
-with (other) instance_destroy();
-kbcounter = 0
+            <string>//life -= 25
+kbcounter = -20
+//with (other) {instance_destroy();
 </string>
           </argument>
         </arguments>

@@ -30,8 +30,10 @@
   <objects name="objects">
     <object>objects\sword_obj</object>
     <object>objects\Player_obj</object>
-    <object>objects\Wall_obj</object>
-    <object>objects\Girder_obj</object>
+    <objects name="Walls">
+      <object>objects\Wall_obj</object>
+      <object>objects\Girder_obj</object>
+    </objects>
     <object>objects\obj_qsand</object>
     <object>objects\obj_tom</object>
     <object>objects\obj_bullet</object>

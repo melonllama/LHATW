@@ -28,6 +28,7 @@
             <string>dtp = 0;
 dtpcounter = 0;
 flysp = 3;
+shot = 0;
 </string>
           </argument>
         </arguments>
@@ -52,7 +53,8 @@ flysp = 3;
             <kind>1</kind>
             <string>global.DTP = distance_to_object(Player_obj)
 
-if (global.DTP == 0) {
+
+if (global.DTP = 0 || shot == 1) {
     dtp = 1
     move_towards_point(Player_obj.x + (200*global.Flip),Player_obj.y - 200,flysp)
 }
@@ -67,11 +69,38 @@ if(dtp == 0) {
 if(dtpcounter == 120) {
     dtp = 0;
     dtpcounter = 0;
+    shot = 0;
 } else if (dtp == 1){
     dtpcounter += 1
 }
 
-
+shot = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_bullet">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>shot = 1;
+with(other){
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
