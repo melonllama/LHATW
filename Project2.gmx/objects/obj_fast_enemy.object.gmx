@@ -53,10 +53,10 @@ kbdistance = 15;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (Player_obj.y+30 &lt; obj_enemy.y) {
+            <string>if (Player_obj.y+30 &lt; obj_fast_enemy.y) {
     ejump = 1
     }
-else if (Player_obj.y+30 &gt;= obj_enemy.y) {
+else if (Player_obj.y+30 &gt;= obj_fast_enemy.y) {
     ejump = 0;
     }
     
